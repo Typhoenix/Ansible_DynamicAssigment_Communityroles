@@ -187,11 +187,11 @@ We want to be able to choose which Load Balancer to use, Nginx or Apache, so we 
 ```
 `site.yml` file
 ```
-
-     - name: Loadbalancers assignment
+ - name: Loadbalancers assignment
        hosts: lb
          - import_playbook: ../static-assignments/loadbalancers.yml
-        when: load_balancer_is_required
+        when: load_balancer_is_required 
+
 ```
 
 Now you can make use of `env-vars\uat.yml` file to define which loadbalancer to use in UAT environment by setting respective environmental variable to `true`.
